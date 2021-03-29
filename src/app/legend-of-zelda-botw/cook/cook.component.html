@@ -1,0 +1,5 @@
+<h1>The Legend of Zelda: Breath of the Wild</h1>
+<h2>Cook</h2>
+<app-multi-select #ingredients [source]="cookService.getIngredients()" placeholder="Select ingredients"></app-multi-select>
+<app-button style="width: 90px; height: 40px; margin: 10px;" (click)="cook(ingredients.getValue())"><ng-container appButtonContent>Cook</ng-container></app-button>
+{{ cookedMeal?.name }}

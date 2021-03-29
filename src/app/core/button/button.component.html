@@ -1,0 +1,8 @@
+<div #container class="button-container" [style]="style" [class]="class">
+    <button class="the-button" type="button" (click)="buttonClick($event)">
+        <ng-content select="[appButtonContent]"></ng-content>
+    </button>
+    <div *ngIf="isOpen | async" class="button-pop-up">
+        <ng-content select="[appButtonPopUp]"></ng-content>
+    </div>
+</div>

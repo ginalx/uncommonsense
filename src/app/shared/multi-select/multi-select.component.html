@@ -1,0 +1,17 @@
+<div #container class="multi-select-container">
+    <button class="main-button" type="button" (click)="click()">
+        <ng-container *ngIf="selected.length ===0">{{ placeholder }}</ng-container>
+        <ng-container *ngFor="let item of selected; index as i; last as isLast">
+            <span [style.marginRight]="isLast ? '0' : '5px'">{{ item.name }}
+                <button class="remove-button" type="button" (click)="remove(i)">
+                    <fa-icon [icon]="['fas', 'times']" [styles]="{'color': 'whitesmoke'}"></fa-icon>
+                </button>
+            </span>
+        </ng-container>
+    </button>
+    <div *ngIf="isOpen | async" class="multi-select-pop-up">
+        <div *ngFor="let item of data; index as i" class="multi-select-option" (click)="select(i)">
+            {{ item.name }}
+        </div>
+    </div>
+</div>

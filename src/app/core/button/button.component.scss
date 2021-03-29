@@ -1,0 +1,22 @@
+@import '../../../styles.scss';
+
+button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    transition: $transition;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+}
+
+button:hover, button:focus {
+    background-color: rgba(0,0,0,.1);
+}
+
+.button-pop-up {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    color: whitesmoke;
+    background-color: rgb(66, 66, 66);
+}
